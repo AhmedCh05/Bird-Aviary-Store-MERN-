@@ -84,7 +84,7 @@ app.post("/admin/login",async(req,res)=>{
 	const dbPassword = register.password;
 	bcrypt.compare(password,dbPassword).then((match)=>{
 		if(!match){
-			return res.sendStatus(400).json({error:"Admin Email and Password Combinations Are Incorrect ! "});
+			//return res.sendStatus(400).json({error:"Admin Email and Password Combinations Are Incorrect ! "});
 		}
 		else{
 			const accessToken = createTokens(register);
